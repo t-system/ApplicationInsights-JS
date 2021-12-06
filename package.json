@@ -1,63 +1,108 @@
 {
+  "_from": "@microsoft/applicationinsights-web",
+  "_id": "@microsoft/applicationinsights-web@2.7.1",
+  "_inBundle": false,
+  "_integrity": "sha512-P6w1kQB3L/CZdm66Xw2kaVKrjDc2twd5UYBKSTcbTt/OJj/MMDlMejSn3/N1eMzsLqHn6SN3lHCnlDZKCJ+ZSg==",
+  "_location": "/@microsoft/applicationinsights-web",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@microsoft/applicationinsights-web",
     "name": "@microsoft/applicationinsights-web",
-    "description": "Microsoft Application Insights JavaScript SDK",
-    "version": "2.7.1",
-    "keywords": [
-        "browser performance monitoring",
-        "script errors",
-        "application insights",
-        "microsoft",
-        "azure"
-    ],
-    "scripts": {
-        "postinstall": "node common/scripts/install-run-rush-silent.js update",
-        "build": "node common/scripts/install-run-rush.js rebuild --verbose",
-        "rebuild": "npm run build",
-        "testx": "rush test --verbose",
-        "test": "node common/scripts/install-run-rush.js test --verbose",
-        "lint": "node common/scripts/install-run-rush.js lint --verbose",
-        "perftest": "node common/scripts/install-run-rush.js perftest --verbose",
-        "rollupes3": "grunt rollupes3",
-        "rupdate": "node common/scripts/install-run-rush.js update --recheck --purge --full",
-        "serve": "grunt serve",
-        "setVersion": "node ./tools/release-tools/setVersion.js",
-        "purge": "node common/scripts/install-run-rush.js purge",
-        "fullClean": "git clean -xdf && npm install && rush update --recheck --full",
-        "fullCleanBuild": "npm run fullClean && npm run rebuild"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/microsoft/ApplicationInsights-JS.git"
-    },
-    "author": "Microsoft Application Insights Team",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/microsoft/ApplicationInsights-JS/issues"
-    },
-    "homepage": "https://github.com/microsoft/ApplicationInsights-JS#readme",
-    "devDependencies": {
-        "@microsoft/rush": "^5.50.0",
-        "@nevware21/grunt-ts-plugin": "^0.4.3",
-        "grunt": "^1.4.1",
-        "grunt-cli": "^1.4.3",
-        "grunt-contrib-connect": "^3.0.0",
-        "grunt-contrib-qunit": "^5.0.1",
-        "grunt-contrib-uglify": "^5.0.1",
-        "@nevware21/grunt-eslint-ts": "^0.2.2",
-        "@typescript-eslint/eslint-plugin": "^4.28.0",
-        "@typescript-eslint/parser": "^4.28.0",
-        "eslint": "^7.29.0",
-        "eslint-config-standard": "^16.0.3",
-        "eslint-plugin-import": "^2.23.4",
-        "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-promise": "^5.1.0",
-        "eslint-plugin-security": "^1.4.0",
-        "typescript": "^4.3.4",
-        "whatwg-fetch": "^3.0.0",
-        "typedoc": "^0.22.8",
-        "connect": "^3.7.0",
-        "puppeteer": "^10.1.0",
-        "chromium": "^3.0.2",
-        "archiver": "^5.3.0"
-    }
+    "escapedName": "@microsoft%2fapplicationinsights-web",
+    "scope": "@microsoft",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@microsoft/applicationinsights-web/-/applicationinsights-web-2.7.1.tgz",
+  "_shasum": "7891a25ecfb8cbf02f6c894538b68706419575e8",
+  "_spec": "@microsoft/applicationinsights-web",
+  "_where": "/Users/cfeltner/Code/EVolvED/source/service/app",
+  "author": {
+    "name": "Microsoft Application Insights Team"
+  },
+  "bugs": {
+    "url": "https://github.com/microsoft/ApplicationInsights-JS/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@microsoft/applicationinsights-analytics-js": "2.7.1",
+    "@microsoft/applicationinsights-channel-js": "2.7.1",
+    "@microsoft/applicationinsights-common": "2.7.1",
+    "@microsoft/applicationinsights-core-js": "2.7.1",
+    "@microsoft/applicationinsights-dependencies-js": "2.7.1",
+    "@microsoft/applicationinsights-properties-js": "2.7.1",
+    "@microsoft/applicationinsights-shims": "2.0.0",
+    "@microsoft/dynamicproto-js": "^1.1.4"
+  },
+  "deprecated": false,
+  "description": "Microsoft Application Insights JavaScript SDK - Web",
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.18.1",
+    "@microsoft/applicationinsights-rollup-es3": "1.1.3",
+    "@microsoft/applicationinsights-rollup-plugin-uglify3-js": "1.0.0",
+    "@nevware21/grunt-eslint-ts": "^0.2.2",
+    "@nevware21/grunt-ts-plugin": "^0.4.3",
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "@rollup/plugin-replace": "^2.3.3",
+    "chromedriver": "^2.45.0",
+    "finalhandler": "^1.1.1",
+    "globby": "^11.0.0",
+    "grunt": "^1.4.1",
+    "grunt-cli": "^1.4.3",
+    "grunt-contrib-qunit": "^5.0.1",
+    "magic-string": "^0.25.7",
+    "pako": "^2.0.3",
+    "rollup": "^2.32.0",
+    "rollup-plugin-cleanup": "3.2.1",
+    "selenium-server-standalone-jar": "^3.141.5",
+    "serve-static": "^1.13.2",
+    "sinon": "^7.3.1",
+    "source-map-loader": "^0.2.3",
+    "tslib": "^2.0.0",
+    "typescript": "^4.3.4"
+  },
+  "homepage": "https://github.com/microsoft/ApplicationInsights-JS#readme",
+  "license": "MIT",
+  "main": "dist/applicationinsights-web.js",
+  "module": "dist-esm/applicationinsights-web.js",
+  "name": "@microsoft/applicationinsights-web",
+  "peerDependencies": {
+    "tslib": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microsoft/ApplicationInsights-JS.git"
+  },
+  "scripts": {
+    "build": "npm run build:esm && npm run build:browser && npm run sri && npm run dtsgen",
+    "build:browser": "rollup -c rollup.config.js",
+    "build:esm": "grunt aisku",
+    "build:snippet": "grunt snippetvnext",
+    "clean": "rm -rfv browser types dist-esm",
+    "dtsgen": "api-extractor run --local && node ../scripts/dtsgen.js 'Microsoft.ApplicationInsights'",
+    "lint": "tslint -p tsconfig.json",
+    "nightwatch": "start node Tests/nightwatch/serve_nightwatch.js && npx concurrently \"npm run nightwatch:chrome\" \"npm run nightwatch:ie11\" \"npm run nightwatch:ie10\" && npm run nightwatch:done || npm run nightwatch:done",
+    "nightwatch:chrome": "nightwatch -c Tests/nightwatch/nightwatch.json Tests/nightwatch/run_nightwatch.js --env chrome",
+    "nightwatch:done": "curl http://localhost:8000/_done",
+    "nightwatch:edge": "nightwatch -c Tests/nightwatch/nightwatch.json Tests/nightwatch/run_nightwatch.js --env edge",
+    "nightwatch:firefox": "nightwatch -c Tests/nightwatch/nightwatch.json Tests/nightwatch/run_nightwatch.js --env firefox",
+    "nightwatch:ie10": "nightwatch -c Tests/nightwatch/nightwatch.json Tests/nightwatch/run_nightwatch.js --env ie10",
+    "nightwatch:ie11": "nightwatch -c Tests/nightwatch/nightwatch.json Tests/nightwatch/run_nightwatch.js --env ie11",
+    "nightwatch:ie8": "nightwatch -c Tests/nightwatch/nightwatch.json Tests/nightwatch/run_nightwatch.js --env ie8",
+    "nightwatch:ie9": "nightwatch -c Tests/nightwatch/nightwatch.json Tests/nightwatch/run_nightwatch.js --env ie9",
+    "rebuild": "npm run build",
+    "sri": "node ../tools/subResourceIntegrity/generateIntegrityFile.js",
+    "test": "grunt aiskutests"
+  },
+  "sideEffects": false,
+  "types": "types/applicationinsights-web.d.ts",
+  "version": "2.7.1"
 }
