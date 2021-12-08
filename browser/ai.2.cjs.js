@@ -787,6 +787,7 @@ function optimizeObject(theObject) {
 
 var strWindow = "window";
 var strDocument = "document";
+var strDocumentMode = "documentMode";
 var strNavigator = "navigator";
 var strHistory = "history";
 var strLocation = "location";
@@ -933,14 +934,15 @@ function getIEVersion(userAgentStr) {
         userAgentStr = navigator_1 ? (navigator_1.userAgent || "").toLowerCase() : "";
     }
     var ua = (userAgentStr || "").toLowerCase();
-    if (strContains(ua, strTrident)) {
+    if (strContains(ua, strMsie)) {
+        var doc = getDocument() || {};
+        return Math.max(parseInt(ua.split(strMsie)[1]), (doc[strDocumentMode] || 0));
+    }
+    else if (strContains(ua, strTrident)) {
         var tridentVer = parseInt(ua.split(strTrident)[1]);
         if (tridentVer) {
             return tridentVer + 4;
         }
-    }
-    else if (strContains(ua, strMsie)) {
-        return parseInt(ua.split(strMsie)[1]);
     }
     return null;
 }
